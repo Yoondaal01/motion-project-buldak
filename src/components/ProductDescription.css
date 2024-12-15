@@ -1,33 +1,71 @@
 /* Product Description Section */
 .product-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 150vh; /* Full screen height */
-    background-color: #090909; /* Light beige background */
-    overflow: hidden; /* Hide any overflow during animation */
-    padding: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150vh; 
+  background-color: #090909; 
+  overflow: hidden; 
+  padding: 0;
+}
+
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-text {
+  font-family: "Onest", sans-serif;
+  font-size: 22rem; 
+  font-weight: 900;
+  color: #fa1602; 
+  text-align: center;
+  opacity: 0; 
+  transform-origin: bottom;
+  perspective: 2000px; 
+  margin: -8vh;
+  padding: 0;
+}
+
+/* Adjust the size for specific phrases if needed */
+.big-text:nth-child(3) {
+  font-size: 20rem;
+}
+
+/* Responsive Design */
+
+/* Tablets (width: 768px and smaller) */
+@media (max-width: 768px) {
+  .product-description {
+    min-height: 100vh; 
+    padding: 2rem;
   }
-  
-  .text-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .big-text {
-    font-family: "Onest", sans-serif;
-    font-size: 22rem; /* Large text size */
-    font-weight: 900;
-    color: #fa1602; /* Bold red color */
-    text-align: center;
-    opacity: 0; /* Initial opacity for animation */
-    transform-origin: bottom; /* Anchor the flip at the bottom */
-    perspective: 2000px; /* Enable 3D perspective */
-    margin: -8vh;
-    padding: 0;
+    font-size: 10rem; 
+    margin: -4vh; 
   }
-  .big-text:nth-child(3){
-    font-size: 20rem;
+
+  .big-text:nth-child(3) {
+    font-size: 8rem; 
+    margin: 4vh;
   }
-  
+}
+
+/* Mobile Devices (width: 480px and smaller) */
+@media (max-width: 480px) {
+  .product-description {
+    min-height: 100vh; 
+    padding: 1.5rem;
+  }
+
+  .big-text {
+    font-size: 6rem; 
+    margin: -2vh; 
+  }
+
+  .big-text:nth-child(3) {
+    font-size: 5.5rem; 
+  }
+}

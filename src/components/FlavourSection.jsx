@@ -49,7 +49,7 @@ const FlavourSection = () => {
   const pieceVariants = {
     hidden: (index) => ({
       opacity: 0,
-      x: index % 2 === 0 ? -250 : 150, // Alternate directions
+      x: index % 2 === 0 ? -250 : 150, 
       y: index % 2 === 0 ? -100 : 100,
     }),
     visible: {
@@ -82,7 +82,7 @@ const FlavourSection = () => {
                 style={{
                   top: piece.position.y,
                   left: piece.position.x,
-                  zIndex: piece.zIndex, // Apply the zIndex dynamically
+                  zIndex: piece.zIndex, 
 
                 }}
               />

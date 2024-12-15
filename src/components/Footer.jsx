@@ -1,3 +1,4 @@
+// Import required styles
 import React from "react";
 import "./Footer.css";
 
@@ -5,11 +6,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo or Brand Name */}
+        {/* Brand or logo */}
         <div className="footer-logo">
           <h2>BULDAK FIRE NOODLES</h2>
         </div>
-        {/* Navigation Links */}
+        {/* Navigation links */}
         <nav className="footer-nav">
           <ul>
             <li>
@@ -26,7 +27,7 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-        {/* Social Media Icons */}
+        {/* Social media icons */}
         <div className="footer-socials">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <img src="src/assets/ic_baseline-facebook.png" alt="Facebook" />
@@ -39,7 +40,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      {/* Copyright Section */}
+      {/* Copyright section */}
       <div className="footer-copyright">
       </div>
     </footer>

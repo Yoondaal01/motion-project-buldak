@@ -1,7 +1,9 @@
+// Import necessary dependencies and styles
 import React from "react";
 import "./HeroSection.css";
 import { motion } from "framer-motion";
 
+// Ramen flavors and their respective assets
 const ramenFlavors = [
   {
     id: 1,
@@ -52,21 +54,21 @@ const HeroSection = () => {
       <div className="flavor-row">
         {ramenFlavors.map(({ id, title, image, backgroundColor, splashes }) => (
           <div key={id} className="flavor-card">
-            {/* Tilted Background */}
+            {/* Background gradient */}
             <div
               className="tilted-background"
               style={{ background: backgroundColor }}
             />
-            {/* Grouped Ramen Image and Splashes */}
+            {/* Animated ramen and splash icons */}
             <motion.div
               className="ramen-splash-group"
               whileHover={{
-                y: -20, // Move upward
-                scale: 1.1, // Enlarge group
+                y: -20, 
+                scale: 1.1, 
                 transition: { type: "spring", stiffness: 200 },
               }}
             >
-              {/* Splash Icons */}
+              {/* Splash icons */}
               <div className="splash-icons">
                 {splashes.map((splash, index) => (
                   <img
@@ -77,26 +79,20 @@ const HeroSection = () => {
                   />
                 ))}
               </div>
-              {/* Ramen Image */}
-              <motion.img
-                src={image}
-                alt={title}
-                className="ramen-image"
-              />
+              {/* Ramen image */}
+              <motion.img src={image} alt={title} className="ramen-image" />
             </motion.div>
-            {/* Flavor Title */}
+            {/* Ramen title */}
             <h2 className="flavor-title">{title}</h2>
           </div>
         ))}
       </div>
-      {/* CTA Section */}
+      {/* Call-to-action button */}
       <div className="cta-section">
-        <h2 className="cta-title"></h2>
         <button className="cta-button">Order Now</button>
       </div>
     </section>
   );
 };
-
 
 export default HeroSection;

@@ -1,6 +1,6 @@
-/* Navbar Styling */
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend+Tera:wght@100..900&family=Onest:wght@100..900&display=swap');
 
+/* Navbar Styling */
 .navbar {
     display: flex;
     background-color: #090909;
