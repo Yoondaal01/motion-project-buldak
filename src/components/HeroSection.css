@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Freckle+Face&family=Lexend+Tera:wght@100..900&family=Oi&family=Onest:wght@100..900&family=Rubik+Puddles&family=ZCOOL+KuaiLe&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #090909;
+  color: #FFF;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  background-color: #090909;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 10vh;
+}
+
+.hero-title {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-size: 5rem;
+  color: #fa1602;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+/* Flavor Row */
+.flavor-row {
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  flex-wrap: wrap;
+}
+
+/* Flavor Card */
+.flavor-card {
+  position: relative;
+  width: 280px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tilted Background */
+.tilted-background {
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  border-radius: 50px;
+  z-index: 0; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 30%;
+}
+
+
+
+.splash-icons {
+  position: absolute;
+  top: 5px;
+  left: 10%;
+  transform: translateX(-10%);
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+  rotate: -35deg;
+}
+
+.splash-svg {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.splash-svg:hover {
+  transform: scale(1.2) rotate(15deg); 
+  opacity: 1; 
+}
+
+
+/* Ramen Image */
+
+.ramen-image {
+  position: relative;
+  width: 240px;
+  height: auto;
+  z-index: 2; 
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  rotate: -35deg;
+}
+
+.flavor-card:nth-child(2) img:nth-child(3) {
+  width: 20px;
+  height: auto;
+}
+.flavor-card:nth-child(2) h2 {
+  margin-top: 6.5rem;
+}
+
+
+.ramen-image:hover {
+  transform: translateY(-20px) scale(1.1); 
+
+}
+
+
+/* Flavor Title */
+.flavor-title {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #FFF;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* CTA Section */
+.cta-section {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 20px;
+}
+
+.cta-title {
+  font-family: "Onest", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  font-family: "Onest", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #090909;
+  background-color: #fa1602;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.cta-button:hover {
+  background-color: #fa1602;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .hero {
+    min-height: 170vh;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+ .hero{
+  min-height: 210vh;
+
+ }
+  
+}

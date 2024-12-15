@@ -1,0 +1,81 @@
+/* Footer Styling */
+.footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 1rem;
+  }
+  
+  .footer-logo h2 {
+    font-family: "Freckle Face", sans-serif;
+    font-size: 1.8rem;
+    color: #ffcc00;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "ZCOOL KuaiLe", cursive;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav li a:hover {
+    color: #ffcc00;
+  }
+  
+  .footer-socials {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-socials a img {
+    width: 34px;
+    height: 34px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-socials a img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-copyright {
+    font-size: 0.8rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+  

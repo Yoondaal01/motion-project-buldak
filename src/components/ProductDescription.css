@@ -1,0 +1,33 @@
+/* Product Description Section */
+.product-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh; /* Full screen height */
+    background-color: #090909; /* Light beige background */
+    overflow: hidden; /* Hide any overflow during animation */
+    padding: 0rem;
+  }
+  
+  .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .big-text {
+    font-family: "Onest", sans-serif;
+    font-size: 22rem; /* Large text size */
+    font-weight: 900;
+    color: #fa1602; /* Bold red color */
+    text-align: center;
+    opacity: 0; /* Initial opacity for animation */
+    transform-origin: bottom; /* Anchor the flip at the bottom */
+    perspective: 2000px; /* Enable 3D perspective */
+    margin: -8vh;
+    padding: 0;
+  }
+  .big-text:nth-child(3){
+    font-size: 20rem;
+  }
+  
