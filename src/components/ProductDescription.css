@@ -3,9 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 150vh; 
-  background-color: #090909; 
-  overflow: hidden; 
+  min-height: 170vh;
+  background-color: #090909;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -17,55 +17,58 @@
 
 .big-text {
   font-family: "Onest", sans-serif;
-  font-size: 22rem; 
+  font-size: clamp(3rem, 20vw, 21rem); /* Dynamically scale text size */
   font-weight: 900;
-  color: #fa1602; 
+  color: #fa1602;
   text-align: center;
-  opacity: 0; 
-  transform-origin: bottom;
-  perspective: 2000px; 
-  margin: -8vh;
+  opacity: 0; /* Initial opacity for animation */
+  transform-origin: bottom; /* Anchor the flip at the bottom */
+  perspective: 2000px; /* Enable 3D perspective */
+  margin: clamp(-6vh, 8vh, -10vh) 0; /* Dynamic vertical margin */
   padding: 0;
 }
 
 /* Adjust the size for specific phrases if needed */
 .big-text:nth-child(3) {
-  font-size: 20rem;
+  font-size: clamp(3rem, 18vw, 20rem); /* Dynamically scale text size for this phrase */
+  margin: clamp(-6vh, 8vh, -10vh) 0; /* Slightly larger margin range */
 }
 
 /* Responsive Design */
 
 /* Tablets (width: 768px and smaller) */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .product-description {
-    min-height: 100vh; 
-    padding: 2rem;
+    min-height: 50vh; /* Reduce height for smaller layouts */
+    padding: 0rem;
+    margin-top: 0;
   }
 
   .big-text {
-    font-size: 10rem; 
-    margin: -4vh; 
+    font-size: clamp(2rem, 18vw, 14rem); /* Scale down text for tablets */
+    margin: clamp(-6vh, 4vh, -2vh) 0; /* Adjust vertical margins for smaller screens */
   }
 
   .big-text:nth-child(3) {
-    font-size: 8rem; 
-    margin: 4vh;
+    font-size: clamp(2rem, 16vw, 12rem); /* Adjust specific text size */
+    margin: clamp(-6vh, 5vh, -2vh) 0;
   }
 }
 
 /* Mobile Devices (width: 480px and smaller) */
 @media (max-width: 480px) {
   .product-description {
-    min-height: 100vh; 
+    min-height: 50vh; /* Reduce height for mobile */
     padding: 1.5rem;
   }
 
   .big-text {
-    font-size: 6rem; 
-    margin: -2vh; 
+    font-size: clamp(1.5rem, 17vw, 8rem); /* Further reduce text size */
+    margin: clamp(-4vh, 6vh, -1vh) 0; /* Adjust vertical margins for compact spacing */
   }
 
   .big-text:nth-child(3) {
-    font-size: 5.5rem; 
+    font-size: clamp(1.5rem, 15vw, 7rem); /* Scale down specific text */
+    margin: clamp(-4vh, 7vh, -1vh) 0; /* Increase spacing slightly */
   }
 }

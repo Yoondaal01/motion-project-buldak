@@ -49,8 +49,8 @@ const FlavourSection = () => {
   const pieceVariants = {
     hidden: (index) => ({
       opacity: 0,
-      x: index % 2 === 0 ? -250 : 150, 
-      y: index % 2 === 0 ? -100 : 100,
+      x: index % 2 === 0 ? -100 : 100, 
+      y: index % 2 === 0 ? -50 : 50,
     }),
     visible: {
       opacity: 1,
@@ -76,7 +76,7 @@ const FlavourSection = () => {
                 className="puzzle-piece"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.86 }}
+                viewport={{ once: true, amount: 0.7 }}
                 variants={pieceVariants}
                 custom={index}
                 style={{

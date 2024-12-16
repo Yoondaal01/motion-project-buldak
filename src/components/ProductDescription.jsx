@@ -32,7 +32,7 @@ const ProductDescription = () => {
             custom={index}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }} // Triggers when 70% in view
+            viewport={{ once: true, amount: 0.8 }} // Triggers when 70% in view
             variants={flipAnimation}
           >
             {phrase}

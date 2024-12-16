@@ -1,48 +1,151 @@
 /* Flavour Section */
 .flavour-section {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    padding: 4rem 5%;
-    background-color: #090909;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 4rem 5%;
+  background-color: #090909;
+}
+
+/* Step Container */
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  gap: 2rem;
+  min-height: 400px;
+}
+
+/* Step Text */
+.step-text {
+  font-family: "Onest", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Puzzle Container */
+.puzzle-container {
+  position: relative;
+  width: 200px; /* Adjust to fit image size */
+  height: 200px; /* Adjust to fit image size */
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.puzzle-piece {
+  position: absolute;
+  width: 400px; /* Adjust based on your image parts */
+  height: 400px;
+  opacity: 0; /* Initially hidden */
+  object-fit: cover;
+}
+
+/* Larger size for the 4th step puzzle pieces */
+.step-container:nth-child(4) .puzzle-piece {
+  width: 600px;
+  height: 600px;
+}
+
+/* Responsive Design */
+
+/* Large Screens (width: 1200px and smaller) */
+@media (max-width: 1200px) {
+  .flavour-section {
+    gap: 4rem; /* Reduce spacing between steps */
+    padding: 3rem 4%; /* Reduce padding for smaller screens */
   }
-  
+
   .step-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    position: relative;
-    gap: 2rem;
-    min-height: 400px;
+    gap: 1.5rem; /* Reduce gaps between elements in each step */
+    min-height: 350px;
   }
-  
+
   .step-text {
-    font-family: "Onest", sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Scale down step text size */
   }
-  
-  /* Puzzle Container */
+
   .puzzle-container {
-    position: relative;
-    width: 200px; /* Adjust to fit image size */
-    height: 200px; /* Adjust to fit image size */
-    margin: 0 auto;
+    width: 150px; /* Scale down puzzle container */
+    height: 150px;
   }
-  
+
   .puzzle-piece {
-    position: absolute;
-    width: 400px; /* Adjust based on your image parts */
-    height: 400px;
-    opacity: 0; /* Initially hidden */
+    width: 300px; /* Reduce puzzle piece size */
+    height: 300px;
   }
 
   .step-container:nth-child(4) .puzzle-piece {
-    width: 600px; /* Larger size for 4th step */
-    height: 600px;
+    width: 500px; /* Adjust for 4th step */
+    height: 500px;
   }
-  
+}
+
+/* Tablets (width: 750px and smaller) */
+@media (max-width: 750px) {
+  .flavour-section {
+    gap: 3rem; /* Further reduce spacing */
+    padding: 2rem 3%; /* Compact padding for tablets */
+  }
+
+  .step-container {
+    gap: 1.2rem; /* Reduce element gaps further */
+    min-height: 300px;
+  }
+
+  .step-text {
+    font-size: 2rem; /* Scale down step text size */
+  }
+
+  .puzzle-container {
+    width: 120px; /* Reduce puzzle container */
+    height: 120px;
+  }
+
+  .puzzle-piece {
+    width: 250px; /* Adjust puzzle piece size */
+    height: 250px;
+  }
+
+  .step-container:nth-child(4) .puzzle-piece {
+    width: 400px; /* Adjust for 4th step */
+    height: 400px;
+  }
+}
+
+/* Mobile Devices (width: 480px and smaller) */
+@media (max-width: 480px) {
+  .flavour-section {
+    gap: 2rem;
+   
+  }
+
+  .step-container {
+    gap: 1rem; 
+    min-height: 350px;
+  }
+
+  .step-text {
+    font-size: 1.5rem; 
+  }
+
+  .puzzle-container {
+    width: 50px; 
+    height: 200px;
+  }
+
+  .puzzle-piece {
+    width: 200px; 
+    height: 200px;
+  }
+
+  .step-container:nth-child(4) .puzzle-piece {
+    width: 370px; 
+    height: 250px;
+  }
+}
+
