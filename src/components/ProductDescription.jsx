@@ -11,12 +11,12 @@ const phrases = [
 
 const ProductDescription = () => {
     const flipAnimation = {
-        hidden: { opacity: 0, rotateX: -90 }, // Starts rotated downwards with opacity 0
+        hidden: { opacity: 0, rotateX: -90 }, 
         visible: (i) => ({
           opacity: 1,
-          rotateX: 0, // Ends flat and visible
+          rotateX: 0, 
           transition: {
-            duration: 1, // Duration of each line animation
+            duration: 1, 
             ease: "easeOut",
           },
         }),
@@ -32,7 +32,7 @@ const ProductDescription = () => {
             custom={index}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.8 }} // Triggers when 70% in view
+            viewport={{ once: true, amount: 0.8 }} 
             variants={flipAnimation}
           >
             {phrase}
